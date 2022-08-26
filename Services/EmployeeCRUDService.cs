@@ -9,13 +9,16 @@ namespace Post2.Services
 
         private readonly IGenericRepositroy<Employee> _employeeRepository;
         private readonly IGenericRepositroy<Address> _addressRepository;
-        public EmployeeCRUDService(IGenericRepositroy<Employee> employeeRepository, IGenericRepositroy<Address> addressRepository)
+        private readonly IAccountNumberValidationService _accountNumberValidationService;
+        public EmployeeCRUDService(IGenericRepositroy<Employee> employeeRepository, IGenericRepositroy<Address> addressRepository, IAccountNumberValidationService accountNumberValidationService)
         {
             _employeeRepository = employeeRepository;
             _addressRepository = addressRepository;
+            _accountNumberValidationService = accountNumberValidationService;
         }
         public async Task<EmployeeModel> Create(EmployeeModel model)
         {
+
             var existingAddress = await _addressRepository.GetById(model.Id);
             var employee = new Employee
             {

@@ -17,8 +17,7 @@ namespace Post2.Modules
         public string Email { get; set; }
         public decimal Salary { get; set; }
         public int AddressId { get; set; }
+        public string AddressNumber { get; set; }
 
-
-        // smth added to the here
     }
 }

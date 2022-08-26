@@ -49,6 +49,7 @@ builder.Services.AddTransient<IGenericCRUDService<AddressModel>, AddressCRUDServ
 
 builder.Services.AddTransient<IGenericRepositroy<Employee>, EmployeeRepository>();
 builder.Services.AddTransient<IGenericRepositroy<Address>, AddressRepository>();
+builder.Services.AddTransient<IAccountNumberValidationService, AccountNumberValidationService>();
 
 
 
