@@ -18,6 +18,8 @@ namespace Post2.Services
         }
         public async Task<EmployeeModel> Create(EmployeeModel model)
         {
+            if (!string.IsNullOrWhiteSpace(model.AddressNumber) && !_accountNumberValidationService.isValid(model.AddressNumber))
+                throw new Exception("Invalid accound number");
 
             var existingAddress = await _addressRepository.GetById(model.Id);
             var employee = new Employee
