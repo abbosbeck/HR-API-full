@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Post2", "Post2.csproj", "{D8CA8395-47A7-4714-8D63-2853D103189F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dadabase", "Dadabase\Dadabase.csproj", "{DC170211-D3EB-4325-8FF0-12DF9E9C8CEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dadabase", "Dadabase\Dadabase.csproj", "{DC170211-D3EB-4325-8FF0-12DF9E9C8CEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
