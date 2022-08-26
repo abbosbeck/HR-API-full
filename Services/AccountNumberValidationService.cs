@@ -10,13 +10,13 @@
         {
             var firstDelimiter = accountNumber.IndexOf('-');
             var secondDelimiter = accountNumber.LastIndexOf('-');
-            if (firstDelimiter == -1 || secondDelimiter == -1)
+            if (firstDelimiter == -1 || secondDelimiter == firstDelimiter)
                 throw new ArgumentException();
 
 
 
             var firstPart = accountNumber.Substring(0, firstDelimiter);
-            if (firstPart.Length == startingPartLength)
+            if (firstPart.Length != startingPartLength)
                 return false;
             var tempPart = accountNumber.Remove(0, startingPartLength + 1);
             var middlePart = tempPart.Substring(0, tempPart.IndexOf('-'));
